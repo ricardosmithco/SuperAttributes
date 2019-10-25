@@ -1,6 +1,6 @@
 package com.ricardosmithco.util;
 
-import java.io.FileNotFoundException;
+import java.io.FileNotFoundException; 
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,8 +31,7 @@ public class FriendFactory {
 		Properties prop = new Properties();
 		
 		try {
-//			InputStream stream = this.getClass().getResourceAsStream("/database.properties");
-//			prop.load(stream);
+
 			prop.load(new FileReader("database.properties"));
 			Class.forName(prop.getProperty("driver"));
 			conn = DriverManager.getConnection(
